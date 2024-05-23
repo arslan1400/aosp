@@ -17,10 +17,10 @@ on:
         type: choice
         options:
           - 'LineageOS 20.0'
-          - 'LineageOS 21.0'
+          - 'ProjectMatrixx 14.0'
           - 'ArrowOS 13.1'
           - 'DerpFest 13.0'
-          - 'CipherOS 14'
+          - 'Rising 14'
           - 'PixelOS 14'
           - 'LineageOS 16.0'
           - 'CyanogenMOD 14.1'
@@ -38,7 +38,7 @@ on:
       LOCAL_MANIFEST_BRANCH:
         description: "Personal local manifest's branch:"
         required: false
-        default: 'lineage-a52sxq'
+        default: 'matrixx'
       DEVICE_NAME:
         description: "Device's codename:"
         required: true
@@ -46,7 +46,7 @@ on:
       PRODUCT_NAME:
         description: "Product to build:"
         required: true
-        default: "lineage_a52sxq"
+        default: "lineage_a52sxq-ap1a"
       BUILD_COMMAND:
         description: 'Command to be used for compiling:'
         required: true
@@ -89,20 +89,20 @@ jobs:
           export PROJECTID="64"
           export REPO_INIT="repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 13 --depth=1"
         ;;
-        "LineageOS 21.0")
+        "ProjectMatrixx 14.0")
           export PROJECTFOLDER="/crave-devspaces/Lineage21"
           export PROJECTID="72"
-          export REPO_INIT="repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs --depth=1"
+          export REPO_INIT="repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs --depth=1"
         ;;
         "LineageOS 20.0")
           export PROJECTFOLDER="/crave-devspaces/Lineage20"
           export PROJECTID="36"
           export REPO_INIT="repo init -u https://github.com/accupara/los20.git -b lineage-20.0 --git-lfs --depth=1"
         ;;
-        "CipherOS 14")
+        "Rising 14")
           export PROJECTFOLDER="/crave-devspaces/Cipher14"
           export PROJECTID="79"
-          export REPO_INIT="repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen --git-lfs --depth=1"
+          export REPO_INIT="repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1"
         ;;
         "PixelOS 14")
           export PROJECTFOLDER="/crave-devspaces/Pixel14"
