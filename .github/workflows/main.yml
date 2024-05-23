@@ -17,7 +17,7 @@ on:
         type: choice
         options:
           - 'LineageOS 20.0'
-          - 'ProjectMatrixx 14.0'
+          - 'LineageOS 21.0'
           - 'ArrowOS 13.1'
           - 'DerpFest 13.0'
           - 'Rising 14'
@@ -89,10 +89,10 @@ jobs:
           export PROJECTID="64"
           export REPO_INIT="repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 13 --depth=1"
         ;;
-        "ProjectMatrixx 14.0")
+        "LineageOS 21.0")
           export PROJECTFOLDER="/crave-devspaces/Lineage21"
           export PROJECTID="72"
-          export REPO_INIT="repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs --depth=1"
+          export REPO_INIT="repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs --depth=1"
         ;;
         "LineageOS 20.0")
           export PROJECTFOLDER="/crave-devspaces/Lineage20"
